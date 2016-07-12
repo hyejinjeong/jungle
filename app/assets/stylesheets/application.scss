@@ -1,0 +1,47 @@
+@import 'comments';
+@import 'bootstrap';
+@import "materialize/components/color";
+$primary-color: color("blue", "lighten-2") !default;
+@import 'materialize';
+
+
+html {
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+
+
+body{
+  background-color: #e3f2fd;
+}
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.btn-position{
+  position: fixed;
+  right: 50px;
+  bottom:50px;
+}
+
+#add-button{
+  position: fixed; right: 30px; bottom: 30px; z-index: 99
+}
+
+.collapsible-header{
+  position:relative;
+  font-size: 1.2em;
+  color:#757575
+
+}
+.collapsible-body{
+  font-size: 1.5em;
+  color:#757575
+
+}
+
+.show-button{
+  position:absolute;
+  right:10px;
+}

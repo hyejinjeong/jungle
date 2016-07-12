@@ -1,14 +1,18 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div class="center">
+  <div class="col s12 m6">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title"><%= @post.title %></span>
+        <p><%= simple_format(@post.content) %>.</p>
+      </div>
+      <div class="card-action">
+        <%= link_to 'Edit', edit_post_path(@post) %>
+        <%= link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }%>
+      </div>
+      <div class="card-action">
+        <%= render "comments/comments" %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -11,15 +11,23 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="row">
+      <div class="input-field col">
+        <%= f.text_field :title, :id => "text", :class => "text" %>
+        <label class="active" for="first_name2">Title</label>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="row">
+          <div class="input-field col s12">
+            <%= f.text_area :content, :id => "textarea1", :class => "materialize-textarea" %>
+            <label for="textarea1">Textarea</label>
+          </div>
+        </div>
+    </div>
+
+    <%= button_tag(type: "submit", class: "btn btn-default") do %>
+        submit <i class="icon-repeat"></i>
+    <% end %>
 <% end %>
